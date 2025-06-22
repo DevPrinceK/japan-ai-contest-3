@@ -1,0 +1,7 @@
+# render.yaml
+services:
+  - type: web
+    name: flask-digit-gan
+    runtime: python
+    buildCommand: ""
+    startCommand: python app.py
