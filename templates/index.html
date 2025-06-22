@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digit Generator GAN</title>
+</head>
+<body>
+    <h1>Generate Handwritten Digit</h1>
+    <form method="POST">
+        <label for="digit">Enter a digit (0-9):</label>
+        <input type="number" name="digit" min="0" max="9" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if images %}
+    <h2>Generated Images</h2>
+    {% for img in images %}
+        <img src="{{ img }}" alt="digit image" style="margin:10px; border:1px solid #ccc;">
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
